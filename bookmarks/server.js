@@ -8,7 +8,7 @@ const { hash, jsonAuth, auth } = require('./controllers/authController');
 const User = require('./models/User');
 const SECRET = process.env.SECRET_KEY;
 const app = express();
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 app.use(express.json());
 app.use((req, res, next) => {
     console.log(req.body)
